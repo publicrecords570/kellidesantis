@@ -39,13 +39,45 @@
       color: #0645ad;
     }
   </style>
+
+  <style>
+    /* Keyboard navigation and responsive reading. */
+    .skip-link {
+      position: fixed;
+      top: 8px;
+      left: 8px;
+      z-index: 1000;
+      padding: 10px 16px;
+      color: #fff;
+      background: #103f75;
+      border-radius: 4px;
+      transform: translateY(-200%);
+    }
+    .skip-link:focus {
+      transform: translateY(0);
+      color: #fff;
+    }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid #1456a0;
+      outline-offset: 4px;
+    }
+    #main-content:focus { outline: none; }
+    body { overflow-wrap: anywhere; }
+    img, iframe, object, embed { max-width: 100%; }
+    @media (max-width: 600px) {
+      body { margin-left: auto; margin-right: auto; }
+    }
+  </style>
+
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <p><a href="index.html">← Back to Kelli DeSantis Public Records</a></p>
 
-  <h1>Kelli DeSantis Retail Theft Court Record – Walmart, Monroe County Pennsylvania</h1>
+  <main id="main-content" tabindex="-1">
+<h1>Kelli DeSantis Retail Theft Court Record – Walmart, Monroe County Pennsylvania</h1>
 
   <p>
     This page summarizes public court documents concerning a 2023
@@ -126,5 +158,6 @@
     </a>
   </p>
 
+  </main>
 </body>
 </html>
